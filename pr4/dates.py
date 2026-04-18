@@ -19,3 +19,29 @@ print(y)
 x = datetime.datetime(2018, 6, 1)
 
 print(x.strftime("%B")) #%B gets us the month name full version
+
+#1:
+from datetime import date, timedelta
+
+result = date.today() - timedelta(5)
+print(result)
+
+#2:
+today = date.today()
+yesterday = today - timedelta(1)
+tomorrow = today + timedelta(1)
+
+print(yesterday, today, tomorrow)
+
+#3:
+now = datetime.now().replace(microsecond=0)
+print(now)
+
+#4:
+# Example dates (Year, Month, Day, Hour, Minute)
+date1 = datetime(2026, 2, 11, 10, 0, 0)
+date2 = datetime(2026, 2, 11, 11, 30, 0)
+difference = date2 - date1
+seconds = difference.total_seconds()
+
+print(f"The difference is {seconds} seconds.")

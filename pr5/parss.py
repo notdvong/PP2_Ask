@@ -4,7 +4,6 @@ import json
 def parse_receipt(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
-
     prices_raw = re.findall(r'\d[\d\s]*,\d{2}', text)
     prices = [p.replace(' ', '').replace(',', '.') for p in prices_raw]
     

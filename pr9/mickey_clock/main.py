@@ -23,6 +23,5 @@ while running:
     pygame.display.flip()
     clock_timer.tick(60)
 
-# Clean exit
 pygame.quit()
 sys.exit()
